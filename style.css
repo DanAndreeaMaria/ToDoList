@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    min-width: 250px;
+    background-color: #FFC436;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#myInput {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+/*style for the list items*/
+ul li {
+    cursor: pointer;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 12px 8px 12px 40px; 
+    list-style-type: none;
+    background: #E8F6EF;
+    font-size: 25px;
+    transition: 0.2s;
+
+    /*make the list items unselectable*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/*hover effect*/
+ul li:hover {
+    background: #ddd;
+}
+
+/*When click on the task, add a bg color and strike out the text*/
+ul li.checked {
+    background: #FF6969;
+    columns: #fff;
+    text-decoration: line-through;
+}
+
+/*Add a checkmark on click*/
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/*Style the close button*/
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #FFC436;
+    columns: white;
+}
+
+/*Style the header*/
+.head {
+    background-color: #FFC436;
+    padding: 70px 100px;
+    columns: white;
+    text-align: center;
+}
+
+/*Clear floats after the header*/
+.head:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    color: #fff;
+}
+
+/*Style the input*/
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+/*Style the "Add" button*/
+.addBtn {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background: #297F87;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #00A19D;
+}
+
+#myUL {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+/*Date and Time*/
+#datetime {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #FDF4F5;
+}
+
+hr {
+    margin-top: 100px;
+    border: 1px solid #FDF4F5;
+}
+
+footer {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
