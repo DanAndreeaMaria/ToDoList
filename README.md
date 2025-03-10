@@ -27,10 +27,55 @@ This is a simple, interactive To Do List application created using HTML, CSS and
    * Click the "X" button next to a task to remove it from the list.
 4. View Date and Time
    * The current date and time will be displayed at the top of the page and updated every second.
+  
+## Code explanation
+**HTML**
+The HTML file defines the structure of the to-do list app. It includes:
+* A header with the current date and time and an input field to add tasks;
+* A list (<ul>) to display the tasks;
+* A footer with credits.
+  ```HTML
+  <header>
+  <div id="myDIV" class="head">
+    <div id="datetime"></div>
+    <h2 class="title">To Do List</h2>
+    <input type="text" id="myInput" placeholder="Task" autocomplete="off">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+  </header>
+  ```
+**CSS**
+The CSS file is used to style the application:
+  * It defines the layout of the input field, task list and buttons.
+  * Includes hover effects, checked styles for completed tasks and date-time formatting.
+  ```CSS
+  ul li.checked {
+    background: #FF6969;
+    text-decoration: line-through;
+  }
+  ```
+**JavaScript**
+The JavaScript file controls the interactive functionality:
+  * It allows tasks to be added to the list, removed and toggled as completed.
+  * It also handles the real-time update of the current date and time.
+  ```JavaScript
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  }
+  ```
 
 ## File structure
-/To-Do-List
-│
+/To-Do-List <br>
+│  <br>
 ├── index.html <br>      
 ├── style.css <br>       
 ├── script.js <br>       
