@@ -29,6 +29,7 @@ This is a simple, interactive To Do List application created using HTML, CSS and
    * The current date and time will be displayed at the top of the page and updated every second.
   
 ## Code explanation
+
 **HTML**
 The HTML file defines the structure of the to-do list app. It includes:
   * A header with the current date and time and an input field to add tasks;
@@ -72,11 +73,4 @@ The JavaScript file controls the interactive functionality:
     document.getElementById("myInput").value = "";
   }
   ```
-
-## File structure
-/To-Do-List <br>
-│  <br>
-├── index.html <br>      
-├── style.css <br>       
-├── script.js <br>       
-└── README.md <br>       
+   
