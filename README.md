@@ -32,7 +32,7 @@ This is a simple, interactive To Do List application created using HTML, CSS and
 **HTML**
 The HTML file defines the structure of the to-do list app. It includes:
   * A header with the current date and time and an input field to add tasks;
-  * A list <ul> to display the tasks;
+  * A list to display the tasks;
   * A footer with credits.
   ```HTML
   <header>
